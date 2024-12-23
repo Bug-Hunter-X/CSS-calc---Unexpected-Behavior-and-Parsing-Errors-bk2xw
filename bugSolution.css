@@ -1,0 +1,29 @@
+To resolve the issues, ensure the following:
+
+1. **Unit Compatibility:** Use consistent units within the calculation. If you're subtracting pixels, subtract pixels; if you're using percentages, use percentages. Mixing them may lead to incorrect interpretation.
+2. **Operator Spacing:** Always include spaces around the operators (+, -, *, /) within the `calc()` function.  This improves readability and prevents parsing errors. 
+3. **Parentheses:** Use parentheses judiciously to define the order of operations if the calculation is complex. This ensures the intended result.
+
+Here's the corrected CSS:
+
+/* Correct usage of calc() */
+.container {
+  width: calc(100% - 20px);
+}
+
+.element {
+  width: calc(50% + 50px);
+}
+
+.another {
+  width: calc( (100vw - 20px)/2 );
+}
+
+/* Incorrect usage */
+/*.element {
+  width: calc(100%-20px); /* Missing spaces */
+}
+
+.container {
+  width: calc(100% - 20%); /* Unit mismatch */
+}*/
